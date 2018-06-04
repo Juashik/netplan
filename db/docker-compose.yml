@@ -5,20 +5,11 @@ services:
     image: mongo
     volumes:
       - "db-data:/data/db"
+    ports:
+      - "27017:27017"
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
 
-  backend:
-    build: ./backend
-    command: npm start
-    links:
-      - "db"
-    ports:
-      - "8000:8000"
-
 volumes:
   db-data:
-
-networks: 
-  back-tier:
