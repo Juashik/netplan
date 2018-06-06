@@ -9,6 +9,7 @@ module.exports = function (app, db, url) {
                 console.log(err);
                 return res.sendStatus(500);
             }
+            res.header('Access-Control-Allow-Origin: *');
             res.send(docs);
         });
     });
