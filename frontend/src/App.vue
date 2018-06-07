@@ -4,16 +4,16 @@
     <header>
       <div id="header-wrapper">
         <router-link to='/'>
-          <img src="./assets/logo.png">
+          <h2><span>P</span>lanner</h2>
         </router-link>
       </div>
     </header>
 
-    <router-view/>
-
-    <footer>
-      <router-link to='/admin'>Админ-панель</router-link>
-    </footer>
+    <div id="container">
+      <div id="card">
+        <router-view/>
+      </div>
+    </div>
   </div>
 </template>
 

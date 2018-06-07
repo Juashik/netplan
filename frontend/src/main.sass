@@ -1,14 +1,63 @@
+$accent_color: #4fc08d
+$text_color: #707070
+  
+body
+  margin: 0
+  padding: 0
+  height: 100%
+  color: $text_color
+  
+a
+  text-decoration: none
+
+a:visited
+    color: $text_color
+
 #app
-  font-family: 'Avenir', Helvetica, Arial, sans-serif
+  font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
+  background-color: #f6f6f6
   text-align: center
-  color: #2c3e50
-  margin: 0
-
-footer
+  
+#container
+  height: 100%
   width: 100%
-  padding: 15px
-  background: #d4d4d4
-  a
-    color: #555555
+  position: fixed
+  top: 40
+  left: 0
+  display: flex
+  align-items: center
+  align-content: center
+  justify-content: center
+  overflow: auto
+
+#component
+  margin: 50px
+
+#card
+  display: flex
+  flex-direction: column
+  justify-content: center
+  width: 80%
+  height: 70%
+  border-radius: 30px
+  //box-shadow: 1px 4px 30px 0px rgba(50, 50, 50, 0.15)
+  border: solid 1px $accent_color
+  h1
+    font-weight: 500
+    font-size: 2em
+
+header
+  //box-shadow: 1px 4px 30px 0px rgba(50, 50, 50, 0.10)
+  height: 45px
+  width: 100%
+  position: absolute
+  text-align: center
+  #logo
+    height: 30px
+    display: inline-flex
+  h3
+
+span
+  color: $accent_color
