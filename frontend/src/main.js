@@ -18,14 +18,5 @@ new Vue({
   data: {
     endpoint: 'http://localhost:3000/',
     instances: []
-  },
-  methods: {
-    getFullBook: function () {
-      this.$http.get(this.endpoint + 'book').then(function (response) {
-        this.instances = response.data
-      }, function (error) {
-        return Promise.reject(error)
-      })
-    }
   }
 })

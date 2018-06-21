@@ -49,7 +49,7 @@ module.exports = function (app, db, url) {
                 $set: {
                     step: req.body.step,
                     data: req.body.data,
-                    test: req.body.text
+                    text: req.body.text
                 }
             },
             function (err) {

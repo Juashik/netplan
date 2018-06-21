@@ -4,8 +4,8 @@
   <br>
   <br>
   <p>Выберите, что вы хотите сделать:</p>
-  <router-link to='/book' class="button">Открыть учебник</router-link>
-  <router-link to='/test' class="button">Пройти тест</router-link>
+  <router-link to='/book/1' class="button">Открыть учебник</router-link>
+  <router-link to='/test/' class="button">Пройти тест</router-link>
 </div>
 </template>
 
