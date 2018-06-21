@@ -1,9 +1,11 @@
 <template>
-<div id='component' @click="next()">
+<div id='component'>
   <div v-if='steps[0]' class="step">
     <h3>Шаг {{ id }} из {{ size }}</h3>
     <img style='max-width: 90%' :src="imgUrl" alt="">
     <p>{{ text }}</p>
+    <span class='left'><a :href="'/book/'+(id - 1)">◀</a>    </span>
+    <span class='right'><a :href="(id > 7) ? '/' : '/book/'+ (id - -1)">▶</a>    </span>
   </div>
   <div v-if='steps[0] == null' id="loading">
     <img id="loading_img" src="../assets/loading.gif" alt=""/>
@@ -76,15 +78,11 @@ export default {
   },
   watch: {
     '$route' (to, from) {
-      if (/^\d+$/.test(to.params.id)) {
-        if (to.params.id > this.size) {
-          this.$router.replace('/')
-        }
-        if (to.params.id < 1) {
-          this.$router.replace('/book/1')
-        }
-      } else {
-        this.router.replace('/book/1')
+      if (this.id === '9') {
+        this.$router.replace('/')
+      }
+      if (to.params.id < 1) {
+        this.$router.replace('/book/1')
       }
     }
   },
@@ -96,5 +94,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="sass">
-
+span
+  font-size: 1.5em
+  .left
+    margin-right: 40px
+  .right
+    margin-left: 40px
 </style>
